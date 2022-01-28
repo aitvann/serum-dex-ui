@@ -17,7 +17,7 @@ export default function CustomClusterEndpointDialog({
   const [customEndpointName, setCustomEndpointName] = useState('');
 
   const onSubmit = () => {
-    const fullEndpoint = 'https://' + customEndpoint;
+    const fullEndpoint = 'http://' + customEndpoint;
     const params = {
       name: customEndpointName,
       endpoint: fullEndpoint,
@@ -56,7 +56,7 @@ export default function CustomClusterEndpointDialog({
           <Input
             placeholder="Cluster Endpoint"
             value={customEndpoint}
-            addonBefore={'https://'}
+            addonBefore={'http://'}
             onChange={(e) => setCustomEndpoint(e.target.value)}
           />
         </Col>
